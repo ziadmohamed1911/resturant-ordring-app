@@ -31,16 +31,39 @@ document.getElementById("menu").addEventListener("click", function(e){
 
 function addToOrder(item) {
    order.push(item)
-   renderOrder(order)
+   getOrderHtml(order)
+}
+
+function getOrderHtml(orderArr) {
+   const orderHtml = orderArr.map(orderItem => `
+      <div class="order-item">
+         <h3 class="order-item-title">${orderItem.name}</h3>
+         <button class="remove-item" 
+         id="remove-item" data-id="${orderItem.id}">remove</button>
+         <p class="item-price">$${orderItem.price}</p>
+      </div>`).join("")
+
+   renderOrder(`<h2 class="section-title">Your order</h2>${orderHtml}`)
+}
+
+function renderOrder(orderHtml){
+   document.getElementById("order-container").innerHTML = orderHtml
 }
 
 
 
 
 
+         
 
 
 
 
 
 
+// </div>
+//                     <div class="order-completion-section">
+//                         <h2>Total Price: <span class="total-price">$26</span></h2>
+//                         <button class="complete-order-btn" 
+//                         id="complete-order-btn">Complete order</button>
+//                     </div>
