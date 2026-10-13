@@ -3,46 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Google Fonts -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:,">
     <title>Restaurant Ordering App</title>
 </head>
 <body>
-    <header> 
+    <header>
         <section class="hero-line">
             <h1>Ziad's diner</h1>
-            <h2>The best burgers and pizza in town.</h2> 
+            <h2>The best burgers and pizza in town.</h2>
         </section>
     </header>
+
     <main>
-        <section>
-        <div class="container">
-                <div id="menu">
-                    <!-- items will appear here -->
-                </div>
-            </div>
-        </section>
-        <section class="order-section">
-            <div class="container" id="order-container">
-                <!-- order items will apear here -->
-            </div>
-            <div id="total-order-price"></div>
+        <!-- menu items are rendered here -->
+        <section class="container">
+            <div id="menu"></div>
         </section>
 
-        <section class="order-payment-form">
-            <form class="payment-form">
-                <input type="text" placeholder="Enter your full name" id="full name">
-                <input type="text" placeholder="Enter card number" id="card number">
-                <input type="text" placeholder="Enter CCV" id="CCV">
-                <button type="submit">pay</form>button>
-            </form>
-        </section>
+        <!-- order list + total are rendered here -->
+        <section class="container" id="order-container"></section>
+
+        <!-- "thanks" message is rendered here -->
+        <section id="confirmation"></section>
     </main>
-        
+
+    <!-- payment popup (hidden until "Complete order" is clicked) -->
+    <div class="modal-overlay" id="payment-modal">
+        <form class="payment-form" id="payment-form">
+            <h2 class="form-title">Enter card details</h2>
+            <input type="text" name="fullName" placeholder="Enter your full name"
+                   autocomplete="name" id="full-name" required>
+            <input type="text" name="cardNumber" placeholder="Enter card number"
+                   inputmode="numeric" autocomplete="cc-number" maxlength="19" required>
+            <input type="text" name="cvv" placeholder="Enter CVV"
+                   inputmode="numeric" autocomplete="cc-csc" maxlength="4" required>
+            <button type="submit" class="pay-btn">Pay</button>
+        </form>
+    </div>
+
     <script src="index.js" type="module"></script>
 </body>
 </html>
