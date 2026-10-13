@@ -13,8 +13,39 @@ header{
     color: #ffff;
 }
 
-.hero-line{
+.hero-line {
     margin-left: 40px;
+}
+
+.container {
+    padding: 0 20px;
+    margin: 40px auto;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-bottom: 1.5px solid #D2D2D2;
+   
+}
+
+.emoji{
+    font-size: 6rem;
+    line-height: 1;
+}
+
+.add-btn {
+    background: white;
+    border: 1px solid #DEDEDE;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    font-weight: 100;
+    cursor: pointer;
+    margin-left: auto;
 }
 
 /* typeography */
@@ -28,3 +59,24 @@ h2 {
     font-weight: 300;
     margin-bottom: 50px;
 }
+
+.item-name {
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
+.item-name, .ingredients .price {
+    margin: 0 0 8px;
+}
+
+.ingredients {
+    color: #8B8B8B;
+    font-size: 1.1rem;
+    text-shadow: 0 0 0 1px #DEDEDE;
+}
+
+.price{
+    font-size: 1.5rem;
+
+}
+
