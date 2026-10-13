@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    font-family: "Smythe", system-ui;
+}
+
+/* layout */
+
+header{
+    background-image: url("images/header.png");
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+    color: #ffff;
+}
+
+.hero-line{
+    margin-left: 40px;
+}
+
+/* typeography */
+
+h1 {
+    font-weight: 400;
+    margin: 20px 0 5px 0;
+}
+
+h2 {
+    font-weight: 300;
+    margin-bottom: 50px;
+}
